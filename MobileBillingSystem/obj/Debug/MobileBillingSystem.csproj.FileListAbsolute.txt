@@ -1,0 +1,7 @@
+C:\Assignment\MobileBillingSystem\MobileBillingSystem\bin\Debug\MobileBillingSystem.exe.config
+C:\Assignment\MobileBillingSystem\MobileBillingSystem\bin\Debug\MobileBillingSystem.exe
+C:\Assignment\MobileBillingSystem\MobileBillingSystem\bin\Debug\MobileBillingSystem.pdb
+C:\Assignment\MobileBillingSystem\MobileBillingSystem\obj\Debug\MobileBillingSystem.csprojResolveAssemblyReference.cache
+C:\Assignment\MobileBillingSystem\MobileBillingSystem\obj\Debug\MobileBillingSystem.csproj.CoreCompileInputs.cache
+C:\Assignment\MobileBillingSystem\MobileBillingSystem\obj\Debug\MobileBillingSystem.exe
+C:\Assignment\MobileBillingSystem\MobileBillingSystem\obj\Debug\MobileBillingSystem.pdb

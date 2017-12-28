@@ -1,0 +1,16 @@
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\bin\Debug\MobleBillingSystemTest.dll
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\bin\Debug\MobleBillingSystemTest.pdb
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\bin\Debug\MobileBillingSystem.exe
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\bin\Debug\MobileBillingSystem.pdb
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\bin\Debug\MobileBillingSystem.exe.config
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\obj\Debug\MobleBillingSystem.test.csproj.CoreCompileInputs.cache
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\obj\Debug\MobleBillingSystemTest.dll
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\obj\Debug\MobleBillingSystemTest.pdb
+C:\Assignment\MobileBillingSystem\MobleBillingSystemTest\obj\Debug\MobleBillingSystem.test.csprojResolveAssemblyReference.cache
