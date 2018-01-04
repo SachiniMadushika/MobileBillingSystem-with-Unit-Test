@@ -101,34 +101,34 @@ namespace MobleBillingSystem.test
             Assert.AreEqual(expected, actual.GetTotalCallCharge());
         }
         //[TestMethod]
-        //public void CallInLocal_withPeekTime_bill()
+        //public void Genarate_CallInLocalwithPeekTimeinSeconds_bill()
         //{
 
         //}
 
         //[TestMethod]
-        //public void CallInLocal_withOffPeekTime_bill()
+        //public void Genarate_CallInLocalwithOffPeekTimeinSeconds_bill()
         //{
 
         //}
 
         //[TestMethod]
-        //public void CallInLong_withPeekTime_bill()
+        //public void Genarate_CallInLongwithPeekTimeinSeconds_bill()
         //{
 
         //}
         //[TestMethod]
-        //public void CallInLong_withOffPeekTime_bill()
+        //public void Genarate_CallInLongwithOffPeekTimeinSeconds_bill()
         //{
 
         //}
         //[TestMethod]
-        //public void CallInLocal_withBothPeekTimeandOffPeekTime_bill()
+        //public void Genarate_CallInLocal_withBothPeekTimeandOffPeekTime_bill()
         //{
 
         //}
         //[TestMethod]
-        //public void CallInLong_withBothPeekTimeandOffPeekTime_bill()
+        //public void Genarate_CallInLongwithBothPeekTimeandOffPeekTimeinSeconds_bill()
         //{
 
         //}
