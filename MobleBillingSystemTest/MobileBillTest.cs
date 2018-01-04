@@ -48,7 +48,7 @@ namespace MobleBillingSystem.test
             billingEngine.AddingNewCustomer("Sachini", "Galle", "071-0000000", 1, new DateTime(18, 1, 3));
             billingEngine.SetCallDetailRecords("071-0000000", "071-1111111", new TimeSpan(12, 00, 00), 240);
 
-            double expected = 12;
+            double expected = 3;
             //Act
             Bill actual = billingEngine.Generate();
             //Assert
