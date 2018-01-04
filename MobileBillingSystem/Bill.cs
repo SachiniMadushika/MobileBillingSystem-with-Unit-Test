@@ -67,18 +67,18 @@ namespace MobileBillingSystem
 
         public void DisplayBill()
         {
-            Console.WriteLine("Phone Number: " + customer.getPhoneNumber());
-            Console.WriteLine("Address: " + customer.getAddress());
-            Console.WriteLine("Total Call Charge: " + totalCallCharge);
-            Console.WriteLine("Tax: " + tax);
-            Console.WriteLine("Rental: " + rental);
-            Console.WriteLine("Bill Amount: " + billAmount);
-            Console.WriteLine("Call Details: ");
-            foreach(var callDetail in callDetails)
-            {
-                callDetail.DisplayBill();
+            //Console.WriteLine("Phone Number: " + customer.getPhoneNumber());
+            //Console.WriteLine("Address: " + customer.getAddress());
+            //Console.WriteLine("Total Call Charge: " + totalCallCharge);
+            //Console.WriteLine("Tax: " + tax);
+            //Console.WriteLine("Rental: " + rental);
+            //Console.WriteLine("Bill Amount: " + billAmount);
+            //Console.WriteLine("Call Details: ");
+            //foreach (var callDetail in callDetails)
+            //{
+            //    callDetail.DisplayBill();
 
-            }
+            //}
         }
     }
 }

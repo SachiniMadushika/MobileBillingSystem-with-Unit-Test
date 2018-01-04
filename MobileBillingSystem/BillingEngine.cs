@@ -32,8 +32,7 @@ namespace MobileBillingSystem
                     double calculateChargerForCallTime = CalculateChargerForCallTime(call);
                     totalCallCharge = totalCallCharge + calculateChargerForCallTime;
                     CallDetails callDetails = new CallDetails(call.GetStartingTimeofCall(), call.GetDurationinSeconds(), call.GetReceiverNumber(), calculateChargerForCallTime);
-                   // bill.SetCallDetails(callDetails);
-
+                    //bill.SetCallDetails(callDetails);
                 }
             }
             bill.SetTotalCallCharge(totalCallCharge);
@@ -42,7 +41,8 @@ namespace MobileBillingSystem
 
             return bill;
         }
-        
+
+
         public bool IsLocalCall(string callerNumber, string receiverNumber)
         {
             string extensionOfCallerNumber = callerNumber.Split('-')[0];
@@ -122,6 +122,7 @@ namespace MobileBillingSystem
         public CallDatailRecords SetCallDetailRecords(string Caller_Number, string Receiver_Number, TimeSpan StartingTimeofCall, int DurationinSeconds)
         {
             CallDatailRecords callDetailRecord = new CallDatailRecords(Caller_Number, Receiver_Number, StartingTimeofCall, DurationinSeconds);
+            callDetailList.Add(callDetailRecord);
             return callDetailRecord;
         }
 

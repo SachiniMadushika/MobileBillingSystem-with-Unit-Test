@@ -35,49 +35,103 @@ namespace MobleBillingSystem.test
         public void CDRDetails_Compared_CDRAddedData()
         {
             billingEngine.SetCallDetailRecords("077-3902905", "077-0000000", new TimeSpan( 15, 27, 0), 30);
-            int expected = 0;
+            int expected = 1;
             int actual = billingEngine.GetCallDatailRecordsList().Count;
 
             Assert.AreEqual(actual, expected);
         }
 
         [TestMethod]
-        public void CallInLocal_withPeekTime_bill()
+        public void GenerateaCallCharge_LocalCallinPeakOneMinute_AddingChargeToBill()
         {
-            billingEngine.AddingNewCustomer("Supun Sethsara", "No:123,Colombo", "071-0000000", 1, new DateTime(17, 12, 23));
-            billingEngine.SetCallDetailRecords("071-0000000", "071-1111111", new TimeSpan(12, 00, 00), 60);
+            //arrange
+            billingEngine.AddingNewCustomer("Sachini", "Galle", "071-0000000", 1, new DateTime(18, 1, 3));
+            billingEngine.SetCallDetailRecords("071-0000000", "071-1111111", new TimeSpan(12, 00, 00), 240);
 
-            double expected = 3;
+            double expected = 12;
             //Act
             Bill actual = billingEngine.Generate();
             //Assert
             Assert.AreEqual(expected, actual.GetTotalCallCharge());
         }
+
+
         [TestMethod]
-        public void CallInLocal_withOffPeekTime_bill()
+        public void GenerateaCallCharge_LocalCallinOffPeakOneMinute_AddingChargeToBill()
         {
+            //arrange
+            billingEngine.AddingNewCustomer("Sachini", "Galle", "071-0000000", 1, new DateTime(18, 1, 3));
+            billingEngine.SetCallDetailRecords("071-0000000", "071-1111111", new TimeSpan(23, 00, 00), 60);
+
+            double expected = 2;
+            //Act
+            Bill actual = billingEngine.Generate();
+
+            //Assert
+            Assert.AreEqual(expected, actual.GetTotalCallCharge());
 
         }
         [TestMethod]
-        public void CallInLong_withPeekTime_bill()
+        public void GenerateaCallCharge_LongCallinPeakOneMinute_AddingChargeToBill()
         {
+            //arrange
+            billingEngine.AddingNewCustomer("Sachini", "Galle", "071-0000000", 1, new DateTime(18, 1, 3));
+            billingEngine.SetCallDetailRecords("071-0000000", "077-1111111", new TimeSpan(13, 00, 00), 60);
 
+            double expected = 5;
+            //Act
+            Bill actual = billingEngine.Generate();
+
+            //Assert
+            Assert.AreEqual(expected, actual.GetTotalCallCharge());
         }
+
         [TestMethod]
-        public void CallInLong_withOffPeekTime_bill()
+        public void GenerateaCallCharge_LongCallinOffPeakOneMinute_AddingChargeToBill()
         {
+            //arrange
+            billingEngine.AddingNewCustomer("Sachini", "Galle", "071-0000000", 1, new DateTime(18, 1, 3));
+            billingEngine.SetCallDetailRecords("071-0000000", "077-1111111", new TimeSpan(23, 00, 00), 60);
 
-        }
-        [TestMethod]
-        public void CallInLocal_withBothPeekTimeandOffPeekTime_bill()
-        {
+            double expected = 4;
+            //Act
+            Bill actual = billingEngine.Generate();
 
+            //Assert
+            Assert.AreEqual(expected, actual.GetTotalCallCharge());
         }
-        [TestMethod]
-        public void CallInLong_withBothPeekTimeandOffPeekTime_bill()
-        {
+        //[TestMethod]
+        //public void CallInLocal_withPeekTime_bill()
+        //{
 
-        }
+        //}
+
+        //[TestMethod]
+        //public void CallInLocal_withOffPeekTime_bill()
+        //{
+
+        //}
+
+        //[TestMethod]
+        //public void CallInLong_withPeekTime_bill()
+        //{
+
+        //}
+        //[TestMethod]
+        //public void CallInLong_withOffPeekTime_bill()
+        //{
+
+        //}
+        //[TestMethod]
+        //public void CallInLocal_withBothPeekTimeandOffPeekTime_bill()
+        //{
+
+        //}
+        //[TestMethod]
+        //public void CallInLong_withBothPeekTimeandOffPeekTime_bill()
+        //{
+
+        //}
 
 
 

@@ -39,10 +39,10 @@ namespace MobileBillingSystem
 
         public void DisplayBill()
         {
-            Console.WriteLine("Start Time:" + startTime);
-            Console.WriteLine("Duration in seconds:" + durationInSeconds);
-            Console.WriteLine("Receiver number:" + receiverNumber);
-            Console.WriteLine("Charge:" + charge);
+            //Console.WriteLine("Start Time:" + startTime);
+            //Console.WriteLine("Duration in seconds:" + durationInSeconds);
+            //Console.WriteLine("Receiver number:" + receiverNumber);
+            //Console.WriteLine("Charge:" + charge);
         }
     }
 }

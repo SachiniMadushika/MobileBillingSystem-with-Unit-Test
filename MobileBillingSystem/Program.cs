@@ -11,6 +11,10 @@ namespace MobileBillingSystem
         static void Main(string[] args)
         {
             BillingEngine billingEngine = new BillingEngine();
+
+            billingEngine.AddingNewCustomer("Kamal Perera", "no 27, Elpitiya", "077-0111111", 1, new DateTime(17, 12, 23));
+            billingEngine.SetCallDetailRecords("077-0111111", "071-0000000", new TimeSpan(16, 45, 0), 240);
+            billingEngine.Generate();
         }
     }
 }
