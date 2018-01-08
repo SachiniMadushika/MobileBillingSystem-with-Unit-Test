@@ -47,6 +47,7 @@
     <Compile Include="CallDatailRecords.cs" />
     <Compile Include="CallDetails.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="Packages\PackageA.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -35,6 +35,7 @@ namespace MobileBillingSystem
                     //bill.SetCallDetails(callDetails);
                 }
             }
+            //bill.SetRental();
             bill.SetTotalCallCharge(totalCallCharge);
             bill.SetTax(AddingTax(bill.GetTotalCallCharge(), bill.GetRental()));
             bill.SetBillAmount(CalculateTotalBillAmount(bill.GetTotalCallCharge(), bill.GetRental(), bill.GetTax()));
@@ -55,30 +56,54 @@ namespace MobileBillingSystem
                 return false;
         }
 
-        public double PeekTimeChargeCalculate(TimeSpan callStartedTime, int durationInMinutes, bool localCall)
-        {
-            double charge = 0;
-            if (callStartedTime >= PeekStartTime && callStartedTime < PeekEndTime)
-            {
-                if (localCall)
-                {
-                    charge = charge + LocalPeekCallCharge;
-                }
-                else
-                {
-                    charge = charge + LongPeekCallCharge;
-                }
+        //public string CheckPackageType()
+        //{
+        //    switch (customer.getPackageName())
+        //    {
+        //        case 'A':
+        //            return new Package-A();
+        //        case 'B':
+        //            return new Package-B();
+        //        case 'C':
+        //            return new Package-C();
+        //        case 'D':
+        //            return new Package-D();
+        //    }
+        //}
 
-            }
-            else
+        public double CalculateSecondsToMinutes(int durationInSeconds)
+        {
+            double durationInMinutes = durationInSeconds / 60;
+            return durationInMinutes;
+        }
+
+        public double PeekTimeChargeCalculate(TimeSpan callStartedTime, int durationInSeconds, bool localCall)
+        {        
+            double charge = 0;
+            for (int a = 0; a < CalculateSecondsToMinutes(durationInSeconds); a++)
             {
-                if (localCall)
+                if (callStartedTime >= PeekStartTime && callStartedTime < PeekEndTime)
                 {
-                    charge = charge + LocalOffPeekCallCharge;
+                    if (localCall)
+                    {
+                        charge = charge + LocalPeekCallCharge;
+                    }
+                    else
+                    {
+                        charge = charge + LongPeekCallCharge;
+                    }
+
                 }
                 else
                 {
-                    charge = charge + LongOffPeekCallCharge;
+                    if (localCall)
+                    {
+                        charge = charge + LocalOffPeekCallCharge;
+                    }
+                    else
+                    {
+                        charge = charge + LongOffPeekCallCharge;
+                    }
                 }
             }
             return charge;
