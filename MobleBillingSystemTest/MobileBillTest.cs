@@ -206,16 +206,30 @@ namespace MobleBillingSystem.test
             //assert
             Assert.AreEqual(expected, actual.GetBillAmount());
         }
-        //[TestMethod]
-        //public void Genarate_CallInLocal_withBothPeekTimeandOffPeekTime_bill()
-        //{
+        [TestMethod]
+        public void Genarate_CallInLocal_withBothPeekTimeandOffPeekTime_bill()
+        {
+            billingEngine.AddingNewCustomer("Sachini", "Galle", "071-0000000", 1, new DateTime(18, 1, 3));
+            billingEngine.SetCallDetailRecords("071-0000000", "071-1111111", new TimeSpan(19, 58, 00), 300);
 
-        //}
-        //[TestMethod]
-        //public void Genarate_CallInLongwithBothPeekTimeandOffPeekTimeinSeconds_bill()
-        //{
+            double expected = 134.4;
+            //act
+            Bill actual = billingEngine.Generate();
+            //assert
+            Assert.AreEqual(expected, actual.GetBillAmount());
+        }
+        [TestMethod]
+        public void Genarate_CallInLongwithBothPeekTimeandOffPeekTimeinSeconds_bill()
+        {
+            billingEngine.AddingNewCustomer("Sachini", "Galle", "071-0000000", 1, new DateTime(18, 1, 3));
+            billingEngine.SetCallDetailRecords("071-0000000", "077-1111111", new TimeSpan(19, 58, 00), 300);
 
-        //}
+            double expected = 134.4;
+            //act
+            Bill actual = billingEngine.Generate();
+            //assert
+            Assert.AreEqual(expected, actual.GetBillAmount());
+        }
 
 
 

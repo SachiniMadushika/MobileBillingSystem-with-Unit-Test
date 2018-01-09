@@ -56,21 +56,6 @@ namespace MobileBillingSystem
                 return false;
         }
 
-        //public string CheckPackageType()
-        //{
-        //    switch (customer.getPackageName())
-        //    {
-        //        case 'A':
-        //            return new Package-A();
-        //        case 'B':
-        //            return new Package-B();
-        //        case 'C':
-        //            return new Package-C();
-        //        case 'D':
-        //            return new Package-D();
-        //    }
-        //}
-
         public double CalculateSecondsToMinutes(int durationInSeconds)
         {
             double durationInMinutes = durationInSeconds / 60;
@@ -80,7 +65,7 @@ namespace MobileBillingSystem
         public double PeekTimeChargeCalculate(TimeSpan callStartedTime, int durationInSeconds, bool localCall)
         {        
             double charge = 0;
-            for (int a = 0; a < CalculateSecondsToMinutes(durationInSeconds); a++)
+            for (int temp = 0; temp < CalculateSecondsToMinutes(durationInSeconds); temp++)
             {
                 if (callStartedTime >= PeekStartTime && callStartedTime < PeekEndTime)
                 {
@@ -105,6 +90,7 @@ namespace MobileBillingSystem
                         charge = charge + LongOffPeekCallCharge;
                     }
                 }
+                
             }
             return charge;
         }

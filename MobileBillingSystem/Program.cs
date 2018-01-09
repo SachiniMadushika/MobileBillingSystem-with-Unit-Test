@@ -17,7 +17,8 @@ namespace MobileBillingSystem
             //billingEngine.Generate();
             //billingEngine.CalculateSecondsToMinutes(240);
             //billingEngine.AddingTax(15 ,100);
-            billingEngine.CalculateTotalBillAmount(15, 100, 23);
+            //billingEngine.CalculateTotalBillAmount(15, 100, 23);
+            billingEngine.PeekTimeChargeCalculate(new TimeSpan(19, 58, 00), 180, true);
         }
     }
 }
